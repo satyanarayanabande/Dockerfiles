@@ -1,2 +1,4 @@
 ARG VERSION
-FROM almalinux:${VERSION}
+FROM almalinux:${VERSION:8}
+ARG GREETING
+RUN "duration is : ${GREETING}"
