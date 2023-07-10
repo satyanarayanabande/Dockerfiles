@@ -1,4 +1,4 @@
 ARG VERSION
-FROM almalinux:${VERSION:8}
-ARG GREETING
-RUN "duration is : ${GREETING}"
+FROM almalinux:${VERSION:-8}
+ARG GREETING="Hello Good Morning"
+RUN echo "duration is : ${GREETING}"
